@@ -1,0 +1,29 @@
+INFINITYFREE LARAVEL KURULUM REHBERİ
+=====================================
+
+1. DOSYA HAZIRLAMA:
+   - create_upload_package.bat dosyasını çalıştırın
+   - infinityfree_upload klasörü oluşacak
+   - Bu klasörü zip'leyin
+
+2. INFINITYFREE AYARLARI:
+   - Control Panel > MySQL Databases
+   - Yeni veritabanı oluşturun
+   - Database bilgilerini not alın
+
+3. DOSYA YÜKLEME:
+   - File Manager > htdocs klasörü
+   - Zip dosyasını yükleyin ve extract edin
+   - .env dosyasını düzenleyin (veritabanı bilgileri)
+
+4. VERİTABANI KURULUMU:
+   - https://yourdomain.infinityfreeapp.com/artisan migrate --force
+   - Veya File Manager'dan migration çalıştırın
+
+5. TEST:
+   - https://yourdomain.infinityfreeapp.com adresini ziyaret edin
+
+SORUN GİDERME:
+- 500 hatası: storage klasörü izinleri
+- Veritabanı hatası: .env dosyası kontrol
+- CSS yüklenmiyor: APP_URL kontrol
