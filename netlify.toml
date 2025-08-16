@@ -1,8 +1,16 @@
 [build]
-  command = "composer install --no-dev --optimize-autoloader"
+  command = "echo Laravel requires PHP server"
   publish = "public"
+
+[build.environment]
+  PHP_VERSION = "8.1"
 
 [[redirects]]
   from = "/*"
   to = "/index.php"
   status = 200
+
+[[headers]]
+  for = "*.php"
+  [headers.values]
+    Content-Type = "text/html"
